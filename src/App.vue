@@ -1,21 +1,14 @@
 
 <template>
   <div class="container mx-auto">
-    <h3
-        class="font-bold text-orange-800 inline-block mb-4 mt-4 m-auto justify-center flex">{{
-        msg
-      }}</h3>
-    <div v-for="course in courses " class="shadow p-5 mb-4 border border-gray-200">
-      <h2>{{ course
-    .name
-}}</h2>
-      <p>{{ course.description }}</p>
-    </div>
-    <button
-        class="inline-block m-auto py-2 px-5 border rounded shadow bg-amber-500 text-red-50 flex justify-start"
-            @click="test">
-      Test
-    </button>
+ <p class="mt-4 mb-4">
+   <router-link to="/"
+                class="px-2 py-2 bg-amber-500 rounded-2xl mr-2 ">Home
+   </router-link>
+   <router-link to="/about" class="px-2 py-2 bg-amber-500 rounded-2xl mr-2 " >About</router-link>
+
+ </p>
+    <router-view></router-view>
   </div>
 </template>
 <script>
